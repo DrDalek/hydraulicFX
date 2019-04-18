@@ -1,4 +1,6 @@
 package Utflow.Panneaux;
 
-public class PanneauSelection {
+import javafx.scene.layout.Pane;
+
+public class PanneauSelection extends Pane {
 }

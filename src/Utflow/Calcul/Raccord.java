@@ -1,4 +1,4 @@
-package Utflow.Materiel;
+package Utflow.Calcul;
 
 public class Raccord {
 }

@@ -1,4 +1,4 @@
-package Utflow.Controller;
+package Utflow.Calcul;
 
 public interface PerteDeCharge {
 }

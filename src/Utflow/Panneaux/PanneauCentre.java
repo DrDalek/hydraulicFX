@@ -1,4 +1,6 @@
 package Utflow.Panneaux;
 
-public class PanneauCentre {
+import javafx.scene.layout.Pane;
+
+public class PanneauCentre extends Pane {
 }
