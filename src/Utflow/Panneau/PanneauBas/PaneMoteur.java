@@ -1,4 +1,4 @@
-package Utflow.Panneaux.PanneauxBas;
+package Utflow.Panneau.PanneauBas;
 
 import javafx.scene.layout.Pane;
 
