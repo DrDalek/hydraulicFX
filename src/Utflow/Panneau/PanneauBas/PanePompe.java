@@ -1,6 +1,9 @@
 package Utflow.Panneau.PanneauBas;
 
-import javafx.scene.layout.Pane;
+public class PanePompe extends PaneMoteur {
 
-public class PanePompe extends Pane {
+    @Override
+    protected String nomMoteur() {
+        return "pompe";
+    }
 }

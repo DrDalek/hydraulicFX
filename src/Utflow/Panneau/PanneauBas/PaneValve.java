@@ -1,6 +1,6 @@
 package Utflow.Panneau.PanneauBas;
 
-import javafx.scene.layout.Pane;
+import Utflow.Calcul.Raccord;
 
-public class PaneValve extends Pane {
+public class PaneValve extends Raccord {
 }

@@ -3,69 +3,45 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <children>
-        <BorderPane>
-            <bottom>
-                <TitledPane alignment="CENTER" animated="false" collapsible="false" focusTraversable="false" text="Propriété de &lt;objet&gt;" BorderPane.alignment="CENTER">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" />
-                    </content>
-                </TitledPane>
-            </bottom>
-            <right>
-                <Pane BorderPane.alignment="CENTER">
-                    <children>
-                        <ChoiceBox prefWidth="150.0" />
-                    </children>
-                </Pane>
-            </right>
-            <center>
-                <LineChart animated="false" disable="true" title="Graphe" BorderPane.alignment="CENTER">
-                    <xAxis>
-                        <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                        <NumberAxis side="LEFT" />
-                    </yAxis>
-                </LineChart>
-            </center>
-            <left>
-                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <GridPane layoutY="155.0">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            </rowConstraints>
-                            <children>
-                                <Label text="Label" GridPane.halignment="RIGHT" />
-                                <TextField GridPane.columnIndex="1" />
-                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                <Label layoutX="10.0" layoutY="17.0" text="Label" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                                <Label layoutX="10.0" layoutY="47.0" text="Label" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                            </children>
-                        </GridPane>
-                    </children>
-                </Pane>
-            </left>
-        </BorderPane>
-    </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <TitledPane alignment="CENTER" animated="false" prefHeight="142.0" prefWidth="600.0" text="untitled">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Spinner editable="true" />
+                  <Spinner editable="true" layoutX="427.0" layoutY="1.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <LineChart>
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Line endX="500.0" fill="#0f41bf" focusTraversable="true" stroke="#5f23a1" strokeWidth="0.5">
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Line>
+            <Line endY="10.0" startX="500.0" startY="10.0" />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

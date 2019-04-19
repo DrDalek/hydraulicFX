@@ -1,6 +1,6 @@
 package Utflow.Panneau.PanneauBas;
 
-import javafx.scene.layout.Pane;
+import Utflow.Calcul.Raccord;
+public class PaneJointure extends Raccord {
 
-public class PaneJointure extends Pane {
 }
