@@ -7,7 +7,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
-public class PanneauSelection extends Pane {
+public class PanneauSelection extends VBox {
+
+    public final int insetV = 1;
+    public final int insetH = 15;
 
     private GridPane grid;
 
@@ -17,13 +20,13 @@ public class PanneauSelection extends Pane {
 
     private void init() {
 
-        Insets espacementLabel = new Insets(5,5,5,5);
+        Insets espacementLabel = new Insets(insetV,insetH,insetV,insetH);
 
         grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setPadding(espacementLabel);
         grid.setVgap(5);
-        grid.setHgap(10);
+        grid.setHgap(15);
 
         Label[] appLabel = {
                 new Label("Pompe"),
@@ -50,6 +53,7 @@ public class PanneauSelection extends Pane {
             grid.addRow(i, appLabel[i], appDisque[i]);
         }
 
+        setAlignment(Pos.CENTER);
         this.getChildren().add(grid);
     }
 
